@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script>
+/*
+Declarar un array con varias notas y visualizar la media del array, ver si esta aprobado o no. Obtener un segundo array que contenga solo las notas aprobadas y visualizar este segundo array.
+*/
+
+/* notas será nuestro array*/
+const notas = [7, 9, 5, 4, 10];
+
+// Calcular la media del array
+const sumaNotas = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+const media = sumaNotas / notas.length;
+
+const estaAprobado = media >= 5;
+
+alert(`La media de las notas es: ${media.toFixed(2)}`);
+alert(`¿Está aprobado? ${estaAprobado ? 'Sí' : 'No'}`);
+
+const notasAprobadas = notas.filter(nota => nota >= 5);
+alert('Notas aprobadas: ' + notasAprobadas.join(', '));
+
+
+</script>
+
+</body>
+</html>
