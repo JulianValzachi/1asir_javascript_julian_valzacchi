@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  </head>
+  <script>
+
+    //Guardar en un array los sueldos de variso empleados junto con sus nombres, Media y nombre de cada empleado//
+
+function Media(empleado) {
+    var sum = 0;
+    for (var i = 1; i < empleado.length; i++) { 
+        sum += empleado[i];
+    }
+    var media = sum / (empleado.length - 1);
+    return media;
+}
+
+function Visualizar(sueldos) {
+    for (var i = 0; i < sueldos.length; i++) {
+        var nombre = sueldos[i][0];
+        var media = Media(sueldos[i]);
+        alert("La media del sueldo de " + nombre + " es " + media);
+    }
+}
+
+var sueldos = [['Luis', 2000, 3000, 2750, 125],
+              ['Pepe', 2000, 3000, 2750, 125],
+              ['Maria', 2000, 3000, 2750, 125],
+              ['Luisa', 2000, 3000, 2750, 125]];
+
+Visualizar(sueldos);
+
+
+  </script>
+  <main>
+<body>
+</body>
+</main>
+</html>
+
