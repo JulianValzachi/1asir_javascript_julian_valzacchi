@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+ 
+  num1=prompt('Ingrese el número que tiene que ser adivinado:','');  
+  num1=parseInt(num1);
+
+  adivi(num1);
+
+  function adivi(a) {
+    pro=prompt("Introduce tu número");
+    pro=parseInt(pro);
+   while(pro !== a){
+
+    if (pro > a) {
+        alert("es mayor")
+        pro=prompt("Introduce tu número");
+        pro=parseInt(pro);
+    }
+    if (pro < a) {
+        alert("es menor")
+        pro=prompt("Introduce tu número");
+        pro=parseInt(pro);
+    }
+    alert("LO LOGRASTE")
+  }
+  }
+
+</script>
+
+</body>
+</html>
