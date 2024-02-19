@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#text_n, #comprobar").hide();
+      $("#continuar").click(function(){
+        var clave = $("#clave").val();
+        alert("El valor introducido es: " + clave);
+        $("#text_n, #comprobar").show();
+        $("#text, #continuar").hide();
+      });
+
+      $("#comprobar").click(function(){
+        var numero = parseInt($("#numero").val());
+        var clave = parseInt($("#clave").val());
+
+        if (numero > clave) {
+          alert("El número es mayor.");
+        } else if (numero < clave) {
+          alert("El número es menor.");
+        } else {
+          alert("¡Lo lograste! El número es igual a la clave.");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  
+<h1>Adivina la clave</h1>
+<form id="form1">
+  <span id="text">Clave secreta<input type="password" name="Clave" id="clave" value=""></span>
+  <input type="button" value="Continuar" id="continuar">
+
+  <span id="text_n">Numero<input type="text" name="numero" id="numero" value=""></span>
+  <input type="button" value="Pulsa" id="comprobar">
+
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
